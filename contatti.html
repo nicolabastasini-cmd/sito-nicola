@@ -25,42 +25,39 @@
         <span class="tag">Scrivimi</span>
         <h2>Modulo di contatto</h2>
         <div class="divider"></div>
-        <form id="contactForm" onsubmit="handleForm(event)">
+        <form id="contactForm" name="contatto" method="POST" data-netlify="true" onsubmit="handleForm(event)">
+          <input type="hidden" name="form-name" value="contatto"/>
           <div class="form-grid">
             <div class="form-group">
               <label class="form-label">Nome *</label>
-              <input class="form-input" type="text" placeholder="Il tuo nome" required/>
+              <input class="form-input" type="text" name="nome" placeholder="Il tuo nome" required/>
             </div>
             <div class="form-group">
               <label class="form-label">Cognome *</label>
-              <input class="form-input" type="text" placeholder="Il tuo cognome" required/>
+              <input class="form-input" type="text" name="cognome" placeholder="Il tuo cognome" required/>
             </div>
           </div>
           <div class="form-group">
             <label class="form-label">Email *</label>
-            <input class="form-input" type="email" placeholder="la.tua@email.com" required/>
+            <input class="form-input" type="email" name="email" placeholder="la.tua@email.com" required/>
           </div>
           <div class="form-group">
             <label class="form-label">Telefono / WhatsApp</label>
-            <input class="form-input" type="tel" placeholder="+39 333 000 0000"/>
+            <input class="form-input" type="tel" name="telefono" placeholder="+39 333 000 0000"/>
           </div>
           <div class="form-group">
             <label class="form-label">Cosa ti interessa?</label>
-            <select class="form-select">
+            <select class="form-select" name="interesse">
               <option value="">Seleziona un'area</option>
               <option>Osteopatia</option>
               <option>Postura & Mézières</option>
               <option>PSYCH-K</option>
-              <option>Fitness & Allenamento</option>
-              <option>Corsi Live Online</option>
-              <option>Percorso Rinascita Consapevole</option>
-              <option>Abbonamento</option>
               <option>Informazioni generali</option>
             </select>
           </div>
           <div class="form-group">
             <label class="form-label">Raccontami di te</label>
-            <textarea class="form-textarea" placeholder="Cosa ti porta qui? Cosa senti nel corpo, cosa vorresti cambiare, dove sei adesso..."></textarea>
+            <textarea class="form-textarea" name="messaggio" placeholder="Cosa ti porta qui? Cosa senti nel corpo, cosa vorresti cambiare, dove sei adesso..."></textarea>
           </div>
           <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Invia messaggio →</button>
         </form>
@@ -129,9 +126,12 @@
 
 <script src="nav.js"></script>
 <script>
-function handleForm(e){
+async function handleForm(e){
   e.preventDefault();
-  document.getElementById('contactForm').style.display='none';
+  const form = document.getElementById('contactForm');
+  const data = new FormData(form);
+  await fetch('/', { method: 'POST', headers: {'Content-Type': 'application/x-www-form-urlencoded'}, body: new URLSearchParams(data).toString() });
+  form.style.display='none';
   document.getElementById('formSuccess').style.display='block';
 }
 </script>
