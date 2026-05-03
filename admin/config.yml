@@ -178,7 +178,34 @@ collections:
           - { label: "Email", name: "email", widget: "string" }
           - { label: "Instagram (username)", name: "instagram", widget: "string" }
           - { label: "YouTube (URL canale)", name: "youtube", widget: "string" }
-          - { label: "Indirizzo studio", name: "indirizzo", widget: "string", default: "Negrar di Valpolicella (VR)" }
+          - { label: "Indirizzo studio", name: "indirizzo", widget: "string", default: "Via Ponte 2, Pescantina (VR)" }
           - { label: "Orari Lun-Ven mattina", name: "orario_mattina", widget: "string", default: "9:00 – 13:00" }
           - { label: "Orari Lun-Ven pomeriggio", name: "orario_pomeriggio", widget: "string", default: "15:00 – 19:00" }
           - { label: "Orari Sabato", name: "orario_sabato", widget: "string", default: "9:00 – 12:00" }
+
+  # ─── INDICE BLOG ──────────────────────────────────────────────────────────
+  - name: "blog-manifest"
+    label: "📋 Indice Articoli Blog"
+    files:
+      - label: "Lista articoli visibili"
+        name: "manifest"
+        file: "_data/posts-manifest.json"
+        fields:
+          - label: "Articoli"
+            name: "root"
+            widget: "list"
+            label_singular: "Articolo"
+            fields:
+              - { label: "File .md (es: _posts/2025-05-01-titolo.md)", name: "file", widget: "string", required: false }
+              - { label: "Titolo", name: "title", widget: "string" }
+              - { label: "Data (gg/mm/aaaa)", name: "date", widget: "string" }
+              - label: "Categoria"
+                name: "category"
+                widget: "select"
+                options:
+                  - { label: "Corpo", value: "corpo" }
+                  - { label: "Movimento", value: "movimento" }
+                  - { label: "Mente", value: "mente" }
+                  - { label: "Nutrizione", value: "nutrizione" }
+              - { label: "Emoji", name: "emoji", widget: "string", default: "📄" }
+              - { label: "Descrizione breve", name: "excerpt", widget: "string" }

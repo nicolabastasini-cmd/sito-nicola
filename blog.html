@@ -84,46 +84,8 @@
 
 <script src="nav.js"></script>
 <script>
-// ─── LISTA POST ───────────────────────────────────────────────────────────
-// Quando aggiungi un articolo dal pannello admin, aggiorna anche questo array.
-const posts = [
-  {
-    file: "_posts/2025-05-01-diaframma-muscolo-postura.md",
-    title: "Il diaframma: il muscolo più importante che non alleni mai",
-    date: "01/05/2025", category: "corpo", emoji: "💨",
-    excerpt: "Postura, stress, digestione, pressione addominale — tutto passa dal diaframma. Perché imparare a respirarlo cambia tutto."
-  },
-  {
-    title: "Mal di schiena cronico: perché il dolore non viene dove pensi",
-    date: "15/04/2025", category: "corpo", emoji: "🔙",
-    excerpt: "Il punto doloroso è quasi sempre una compensazione. Il problema vero è altrove.",
-    body: "<p>Articolo in arrivo. <a href='contatti.html'>Scrivimi per approfondire.</a></p>"
-  },
-  {
-    title: "PSYCH-K: cos'è davvero e cosa può (e non può) fare",
-    date: "10/03/2025", category: "mente", emoji: "🧠",
-    excerpt: "Senza promesse miracolose. Una spiegazione onesta del lavoro sulle credenze subconsce.",
-    body: "<p>Articolo in arrivo. <a href='contatti.html'>Scrivimi per approfondire.</a></p>"
-  },
-  {
-    title: "Allenarsi con la schiena dolente: cosa fare e cosa evitare",
-    date: "20/02/2025", category: "movimento", emoji: "⚡",
-    excerpt: "Non bisogna fermarsi. Ma bisogna sapere cosa fare. Una guida pratica per chi vuole continuare a muoversi.",
-    body: "<p>Articolo in arrivo. <a href='contatti.html'>Scrivimi per approfondire.</a></p>"
-  },
-  {
-    title: "Postura e Mézières: rieducare il corpo, non correggerlo",
-    date: "15/01/2025", category: "corpo", emoji: "🧍",
-    excerpt: "La differenza tra raddrizzarsi e rieducarsi. Come il metodo Mézières lavora sulla causa, non sulla forma.",
-    body: "<p>Articolo in arrivo. <a href='contatti.html'>Scrivimi per approfondire.</a></p>"
-  },
-  {
-    title: "Integratori e sport: cosa ha senso, cosa no",
-    date: "10/12/2024", category: "nutrizione", emoji: "🌾",
-    excerpt: "Senza sponsorizzazioni. I pochi integratori che hanno senso reale per chi si allena.",
-    body: "<p>Articolo in arrivo. <a href='contatti.html'>Scrivimi per approfondire.</a></p>"
-  }
-];
+// ─── LISTA POST (caricata da _data/posts-manifest.json) ───────────────────
+let posts = [];
 
 const catLabel = { corpo:'Corpo', movimento:'Movimento', mente:'Mente', nutrizione:'Nutrizione' };
 
@@ -190,7 +152,10 @@ document.getElementById('filtriWrap').addEventListener('click', e => {
   renderGrid(btn.dataset.cat);
 });
 
-renderGrid('tutti');
+fetch('_data/posts-manifest.json')
+  .then(r => r.json())
+  .then(data => { posts = data; renderGrid('tutti'); })
+  .catch(() => renderGrid('tutti'));
 </script>
 </body>
 </html>
