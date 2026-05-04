@@ -145,7 +145,6 @@ p { font-size: 1.05rem; color: var(--muted); }
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
-  overflow: visible;
 }
 
 .nav {
@@ -164,13 +163,10 @@ p { font-size: 1.05rem; color: var(--muted); }
 }
 
 .nav-logo-mark {
-  width: 110px;
-  height: 110px;
+  width: 72px;
+  height: 72px;
   position: relative;
   flex-shrink: 0;
-  z-index: 10;
-  margin-bottom: -15px;
-  filter: drop-shadow(0 4px 12px rgba(27,58,45,0.15));
 }
 .nav-logo-mark img,
 .nav-logo-mark svg {
