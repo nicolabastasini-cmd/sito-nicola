@@ -8,7 +8,7 @@
       <nav class="nav">
         <a href="index.html" class="nav-brand">
           <div class="nav-logo-mark">
-            <img src="logo.png" alt="Logo Nicola Bastasini" style="width:90px; height:90px; object-fit:contain;">
+            <img src="logo.png" alt="Logo Nicola Bastasini" style="width:100%; height:100%; object-fit:contain;">
           </div>
           <div class="nav-brand-text">
             <div class="nav-brand-name">Nicola Bastasini</div>
