@@ -12,7 +12,7 @@
           </div>
           <div class="nav-brand-text">
             <div class="nav-brand-name">Nicola Bastasini</div>
-            <div class="nav-brand-sub">Wellness · Mind · Nutrition</div>
+            <div class="nav-brand-sub">Wellbeing · Mind · Nutrition</div>
           </div>
         </a>
         <div class="nav-links" id="navLinks">
@@ -59,7 +59,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-brand-name">Nicola Bastasini</div>
-          <div class="footer-brand-sub">Wellness · Mind · Nutrition</div>
+          <div class="footer-brand-sub">Wellbeing · Mind · Nutrition</div>
           <p>Osteopatia, posturologia, Mézières, PSYCH-K, fitness e trasformazione personale. 26 anni di esperienza al servizio del tuo benessere integrato.</p>
           <div class="footer-socials">
             <a href="#" class="footer-social" aria-label="Instagram">📸</a>
