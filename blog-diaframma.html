@@ -4,73 +4,451 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Il diaframma: il muscolo più importante che non alleni mai — Nicola Bastasini</title>
-<meta name="description" content="Postura, stress, digestione, pressione addominale — tutto passa dal diaframma. Perché imparare a respirarlo cambia tutto."/>
+<meta name="description" content="Cos'è davvero il diaframma, perché smetti di usarlo, dove lo paghi (lombare, cervicale, digestione, sonno) e tre esercizi per riattivarlo. Scritto da Nicola Bastasini, osteopata D.O. e posturologo."/>
 <link rel="stylesheet" href="style.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 <style>
-.post-body { max-width: 720px; margin: 0 auto; font-size: 1.1rem; line-height: 1.85; color: var(--text); }
-.post-body h2 { font-family: var(--font-display); color: var(--green); font-size: 1.6rem; margin: 48px 0 16px; }
-.post-body p { margin-bottom: 20px; }
-.post-body ul, .post-body ol { padding-left: 28px; margin-bottom: 20px; }
-.post-body li { margin-bottom: 8px; }
-.post-body strong { color: var(--text); font-weight: 600; }
-.post-body hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
-.post-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 40px; flex-wrap: wrap; }
+  .nb-article {
+    --bg: #FAF7F2;
+    --paper: #FFFFFF;
+    --beige: #E8DCC8;
+    --beige-soft: #F2EADD;
+    --sage: #8FA68E;
+    --sage-deep: #6B8068;
+    --sage-tint: #DCE4DA;
+    --midnight: #1F2A44;
+    --ink: #2A2D2E;
+    --ink-soft: #5A5C5D;
+    --ink-mute: #8A8C8D;
+    --rule: #E5DFD3;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px 96px;
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--ink);
+  }
+
+  .nb-article .crumb {
+    padding: 32px 0 8px;
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .nb-article .crumb a { color: var(--ink-mute); text-decoration: none; }
+  .nb-article .crumb a:hover { color: var(--sage-deep); }
+  .nb-article .crumb .sep { color: var(--beige); }
+  .nb-article .crumb .here { color: var(--sage-deep); }
+
+  .nb-article .hero {
+    padding: 32px 0 56px;
+    border-bottom: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 64px;
+    align-items: end;
+  }
+  .nb-article .hero .meta {
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--sage-deep);
+    font-weight: 600;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .nb-article .hero .meta::before {
+    content: "";
+    width: 32px; height: 1px;
+    background: var(--sage-deep);
+  }
+  .nb-article .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 1.0;
+    letter-spacing: -0.018em;
+    color: var(--midnight);
+    margin: 0;
+  }
+  .nb-article .hero h1 em { font-style: italic; color: var(--sage-deep); font-weight: 400; }
+  .nb-article .hero .standfirst {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 1.4;
+    color: var(--ink-soft);
+    margin: 36px 0 0;
+    max-width: 720px;
+  }
+  .nb-article .hero-side {
+    border-left: 1px solid var(--rule);
+    padding-left: 36px;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 6px;
+  }
+  .nb-article .hero-side .key { display: flex; flex-direction: column; gap: 18px; }
+  .nb-article .hero-side .row { display: grid; grid-template-columns: 80px 1fr; gap: 14px; align-items: baseline; }
+  .nb-article .hero-side .label { font-size: 9.5px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--ink-mute); font-weight: 600; }
+  .nb-article .hero-side .value { font-size: 14px; color: var(--ink); font-weight: 500; }
+  .nb-article .hero-side .value.italic { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; color: var(--sage-deep); }
+
+  .nb-article .anatomy-band {
+    padding: 56px 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .nb-article .anatomy-figure { margin: 0; }
+  .nb-article .anatomy-img { width: 100%; height: auto; display: block; background: #F2EADD; border: 1px solid var(--rule); border-radius: 2px; }
+  .nb-article .anatomy-figure figcaption { margin-top: 14px; font-size: 13px; line-height: 1.55; color: var(--ink-soft); }
+  .nb-article .anatomy-figure figcaption em { font-style: italic; color: var(--sage-deep); }
+  .nb-article .cap-source { display: block; margin-top: 10px; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-mute); font-weight: 500; }
+  .nb-article .cap-source em { font-family: 'Cormorant Garamond', serif; font-style: italic; text-transform: none; letter-spacing: 0; color: var(--sage-deep); font-size: 13px; }
+  .nb-article .cap-num { display: block; font-size: 9.5px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--sage-deep); font-weight: 600; margin-bottom: 6px; }
+  .nb-article .anatomy-stat { font-family: 'Cormorant Garamond', serif; font-size: 22px; line-height: 1.4; color: var(--ink); font-style: italic; }
+  .nb-article .anatomy-stat .big { font-family: 'Cormorant Garamond', serif; font-size: 100px; line-height: 0.95; color: var(--sage-deep); font-weight: 300; font-style: normal; display: block; letter-spacing: -0.02em; margin-bottom: 10px; }
+  .nb-article .anatomy-stat .sub { font-family: 'Inter', sans-serif; font-style: normal; font-size: 14px; line-height: 1.55; color: var(--ink-soft); margin-top: 18px; max-width: 380px; }
+
+  .nb-article .article-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr 300px;
+    gap: 56px;
+    padding: 64px 0 0;
+  }
+  .nb-article .toc { position: sticky; top: 100px; align-self: start; }
+  .nb-article .toc-label { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ink-mute); font-weight: 600; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--rule); }
+  .nb-article .toc ol { list-style: none; padding: 0; margin: 0; counter-reset: toc; display: flex; flex-direction: column; gap: 14px; }
+  .nb-article .toc li { counter-increment: toc; display: grid; grid-template-columns: 26px 1fr; gap: 8px; font-size: 13px; line-height: 1.4; }
+  .nb-article .toc li::before { content: counter(toc, decimal-leading-zero); font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--sage); font-size: 14px; }
+  .nb-article .toc a { color: var(--ink-soft); text-decoration: none; transition: color .2s; }
+  .nb-article .toc a:hover { color: var(--sage-deep); }
+
+  .nb-article .body-text { font-size: 17px; line-height: 1.75; color: var(--ink); }
+  .nb-article .body-text > p { margin: 0 0 22px; }
+  .nb-article .body-text > p:first-of-type::first-letter { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 72px; line-height: 0.9; color: var(--midnight); float: left; padding: 8px 14px 0 0; margin-top: 4px; }
+  .nb-article .body-text h2 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 38px; line-height: 1.15; color: var(--midnight); margin: 56px 0 20px; letter-spacing: -0.005em; }
+  .nb-article .body-text h2 .num { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; color: var(--sage); display: block; margin-bottom: 6px; letter-spacing: 0.04em; font-weight: 400; }
+  .nb-article .body-text h3 { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 16px; color: var(--midnight); margin: 32px 0 8px; }
+  .nb-article .body-text strong { color: var(--midnight); font-weight: 600; }
+  .nb-article .body-text em { font-style: italic; color: var(--sage-deep); }
+  .nb-article .body-text a { color: var(--sage-deep); text-decoration: underline; text-decoration-thickness: 1px; }
+
+  .nb-article .pull { margin: 48px 0; padding: 32px 0 32px 36px; border-left: 2px solid var(--sage); }
+  .nb-article .pull q { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 30px; line-height: 1.3; color: var(--midnight); quotes: "\201C" "\201D"; }
+  .nb-article .pull q::before { color: var(--sage); margin-right: 4px; }
+  .nb-article .pull q::after { color: var(--sage); }
+  .nb-article .pull .attr { margin-top: 16px; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--ink-mute); font-weight: 600; }
+
+  .nb-article .body-text ol.steps { list-style: none; padding: 0; margin: 24px 0; counter-reset: step; }
+  .nb-article .body-text ol.steps li { counter-increment: step; display: grid; grid-template-columns: 56px 1fr; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--rule); }
+  .nb-article .body-text ol.steps li:first-child { border-top: 1px solid var(--rule); }
+  .nb-article .body-text ol.steps li::before { content: counter(step, decimal-leading-zero); font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 32px; color: var(--sage-deep); line-height: 1; font-weight: 400; }
+  .nb-article .body-text ol.steps h4 { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 600; color: var(--midnight); margin: 0 0 6px; }
+  .nb-article .body-text ol.steps p { font-size: 15px; line-height: 1.65; color: var(--ink-soft); margin: 0; }
+
+  .nb-article .symptom-grid { margin: 32px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+  .nb-article .symptom-grid > div { background: var(--bg); padding: 22px; }
+  .nb-article .symptom-grid h4 { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px; color: var(--midnight); margin: 0 0 6px; font-weight: 500; }
+  .nb-article .symptom-grid p { font-size: 14px; line-height: 1.55; color: var(--ink-soft); margin: 0; }
+  .nb-article .symptom-grid .label { font-size: 9.5px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--sage-deep); font-weight: 600; margin-bottom: 10px; }
+
+  .nb-article .rail { position: sticky; top: 100px; align-self: start; display: flex; flex-direction: column; gap: 28px; }
+  .nb-article .nb-card { background: var(--paper); border: 1px solid var(--rule); padding: 24px 22px; }
+  .nb-article .nb-card .card-label { font-size: 9.5px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--sage-deep); font-weight: 600; margin-bottom: 14px; }
+  .nb-article .nb-card h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 22px; line-height: 1.2; color: var(--midnight); margin: 0 0 12px; }
+  .nb-article .nb-card p { font-size: 13.5px; line-height: 1.6; color: var(--ink-soft); margin: 0 0 10px; }
+  .nb-article .nb-card.dark { background: var(--midnight); border-color: var(--midnight); }
+  .nb-article .nb-card.dark .card-label { color: var(--beige); }
+  .nb-article .nb-card.dark h3 { color: #F4ECDD; }
+  .nb-article .nb-card.dark p { color: rgba(244,236,221,0.78); }
+  .nb-article .nb-card.dark .nb-btn { display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; padding: 11px 18px; background: var(--beige); color: var(--midnight); text-decoration: none; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; border-radius: 999px; }
+
+  .nb-article .factoid-stat { display: flex; align-items: baseline; gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--rule); }
+  .nb-article .factoid-stat:last-child { border-bottom: 0; padding-bottom: 0; }
+  .nb-article .factoid-stat .num { font-family: 'Cormorant Garamond', serif; font-size: 36px; line-height: 1; color: var(--sage-deep); font-weight: 400; flex-shrink: 0; min-width: 80px; }
+  .nb-article .factoid-stat .lbl { font-size: 12.5px; line-height: 1.45; color: var(--ink-soft); }
+  .nb-article .factoid-stat .lbl strong { color: var(--ink); }
+
+  .nb-article .author-box { margin: 40px 0 0; padding: 36px; background: var(--beige-soft); display: grid; grid-template-columns: 80px 1fr; gap: 28px; align-items: start; }
+  .nb-article .author-avatar { width: 80px; height: 80px; border-radius: 50%; background: var(--bg); display: grid; place-items: center; overflow: hidden; }
+  .nb-article .author-avatar img { width: 76%; height: auto; display: block; }
+  .nb-article .author-box .label { font-size: 9.5px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--sage-deep); font-weight: 600; margin-bottom: 8px; }
+  .nb-article .author-box h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 24px; color: var(--midnight); margin: 0 0 4px; }
+  .nb-article .author-box .role { font-size: 12.5px; color: var(--ink-mute); margin-bottom: 10px; }
+  .nb-article .author-box p { font-size: 14px; line-height: 1.65; color: var(--ink-soft); margin: 0; }
+
+  .nb-article .cta-strip { margin: 64px 0 0; background: var(--midnight); color: #F4ECDD; padding: 64px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: center; }
+  .nb-article .cta-strip h2 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: 48px; line-height: 1.05; color: #F4ECDD; margin: 0 0 16px; letter-spacing: -0.012em; }
+  .nb-article .cta-strip h2 em { color: var(--sage); font-style: italic; }
+  .nb-article .cta-strip p { font-size: 16px; line-height: 1.6; color: rgba(244,236,221,0.78); margin: 0; }
+  .nb-article .cta-actions { display: flex; flex-direction: column; gap: 12px; }
+  .nb-article .cta-actions .label { font-size: 9.5px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--beige); font-weight: 600; }
+  .nb-article .cta-actions .phone { font-family: 'Cormorant Garamond', serif; font-size: 36px; color: #F4ECDD; font-weight: 500; }
+  .nb-article .cta-actions .place { font-size: 13px; color: rgba(244,236,221,0.65); }
+  .nb-article .cta-actions .nb-btn { display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; padding: 13px 22px; background: var(--beige); color: var(--midnight); text-decoration: none; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; border-radius: 999px; align-self: flex-start; }
+
+  @media (max-width: 1080px) {
+    .nb-article .article-grid { grid-template-columns: 1fr; gap: 32px; }
+    .nb-article .toc, .nb-article .rail { position: static; }
+    .nb-article .rail { flex-direction: row; flex-wrap: wrap; }
+    .nb-article .rail > * { flex: 1 1 260px; }
+    .nb-article .hero { grid-template-columns: 1fr; gap: 32px; }
+    .nb-article .hero-side { border-left: 0; border-top: 1px solid var(--rule); padding: 24px 0 0; }
+    .nb-article .hero h1 { font-size: 52px; }
+    .nb-article .anatomy-band { grid-template-columns: 1fr; gap: 24px; }
+    .nb-article .cta-strip { grid-template-columns: 1fr; padding: 48px 32px; }
+    .nb-article .cta-strip h2 { font-size: 36px; }
+  }
+  @media (max-width: 640px) {
+    .nb-article { padding: 0 20px 64px; }
+    .nb-article .hero h1 { font-size: 38px; }
+    .nb-article .hero .standfirst { font-size: 19px; }
+    .nb-article .body-text { font-size: 16px; }
+    .nb-article .body-text h2 { font-size: 28px; }
+    .nb-article .pull q { font-size: 22px; }
+    .nb-article .symptom-grid { grid-template-columns: 1fr; }
+    .nb-article .author-box { grid-template-columns: 1fr; }
+    .nb-article .cta-strip h2 { font-size: 28px; }
+  }
 </style>
 </head>
 <body>
 
-<section class="page-hero">
-  <div class="container">
-    <a href="blog.html" style="display:inline-flex;align-items:center;gap:6px;font-size:.85rem;color:var(--gold);text-decoration:none;margin-bottom:20px;">← Torna al blog</a>
-    <span class="tag">Corpo</span>
-    <h1 style="max-width:780px;">Il diaframma: il muscolo più importante che non alleni mai</h1>
-    <div class="post-meta">
-      <span style="font-size:.85rem;color:var(--muted);">💨 01/05/2025</span>
-      <span style="font-size:.85rem;color:var(--muted);">· Nicola Bastasini</span>
-    </div>
+<div class="nb-article">
+
+  <div class="crumb">
+    <a href="blog.html">Articoli</a>
+    <span class="sep">/</span>
+    <a href="blog.html">Corpo &amp; respiro</a>
+    <span class="sep">/</span>
+    <span class="here">Il diaframma</span>
   </div>
-</section>
 
-<section class="section band-white">
-  <div class="container">
-    <div class="post-body">
+  <section class="hero">
+    <div>
+      <div class="meta">Corpo &amp; respiro · Lettura 6 min</div>
+      <h1>Il diaframma:<br>il muscolo più importante<br>che <em>non alleni mai.</em></h1>
+      <p class="standfirst">
+        Lo usi più di ventimila volte al giorno, eppure
+        non lo senti, non lo guardi e non lo nomini.
+        Quando smette di lavorare bene, lo paghi
+        ovunque — schiena, cervicale, digestione,
+        sonno, umore.
+      </p>
+    </div>
+    <aside class="hero-side">
+      <div class="key">
+        <div class="row">
+          <span class="label">Autore</span>
+          <span class="value">Nicola Bastasini</span>
+        </div>
+        <div class="row">
+          <span class="label">Ruolo</span>
+          <span class="value">Osteopata D.O. · Posturologo</span>
+        </div>
+        <div class="row">
+          <span class="label">Data</span>
+          <span class="value">9 maggio 2026</span>
+        </div>
+        <div class="row">
+          <span class="label">In breve</span>
+          <span class="value italic">Il respiro è la prima postura.</span>
+        </div>
+      </div>
+    </aside>
+  </section>
 
-      <h2>Perché il diaframma è così importante?</h2>
-      <p>Il diaframma è un muscolo a forma di cupola che separa il torace dall'addome. La maggior parte delle persone sa che serve per respirare. Pochissimi sanno che è anche il muscolo più importante per la postura, per la gestione dello stress e per l'equilibrio di quasi tutti i sistemi del corpo.</p>
-      <p>Dal 1999 lavoro con il corpo delle persone e posso dire con certezza che il diaframma è quasi sempre coinvolto nei problemi di schiena, cervicale, digestione difficile e affaticamento cronico.</p>
+  <section class="anatomy-band">
+    <figure class="anatomy-figure">
+      <img class="anatomy-img" src="diaframma-anatomia.jpg" alt="Tavola anatomica del diaframma — vista inferiore con centro frenico, pilastri lombari, iati esofageo e aortico" loading="lazy" />
+      <figcaption>
+        <span class="cap-num">— FIG. 01</span>
+        Vista inferiore del diaframma. Si distinguono il <em>centro frenico</em> (la cupola tendinea biancastra), i <em>pilastri lombari</em> che lo ancorano alla colonna, lo <em>iato esofageo</em> e lo <em>iato aortico</em>.
+        <span class="cap-source">Fonte: <em>Atlante di Anatomia</em> — Sobotta · UTET</span>
+      </figcaption>
+    </figure>
+    <div class="anatomy-stat">
+      <span class="big">22.000</span>
+      atti respiratori al giorno.<br>
+      Eppure quasi nessuno lo allena.
+      <p class="sub">
+        Il diaframma è l'unico muscolo che lavora 24 ore su 24 senza pause. È involontario quando dormi, volontario quando lo decidi tu. Sta al centro: tra postura, organi, sistema nervoso ed emozioni.
+      </p>
+    </div>
+  </section>
 
-      <h2>Il diaframma e la postura</h2>
-      <p>Quando il diaframma è bloccato o ipoattivo, il corpo compensa. La colonna lombare si irrigidisce. Le spalle salgono. Il collo si tende. La respirazione diventa superficiale e prevalentemente toracica.</p>
-      <p>Questo crea un ciclo che si autoalimenta:</p>
-      <ul>
-        <li>Respiro superficiale → attivazione del sistema nervoso simpatico (stress)</li>
-        <li>Stress → maggiore tensione muscolare</li>
-        <li>Tensione → diaframma ancora più bloccato</li>
-      </ul>
-      <p>La soluzione non è "respirare di più". È reimparare a respirare in modo diaframmatico.</p>
+  <article class="article-grid">
 
-      <h2>Un esercizio pratico</h2>
-      <p>Prova questo adesso:</p>
+    <aside class="toc">
+      <div class="toc-label">Indice</div>
       <ol>
-        <li>Siediti con la schiena dritta ma non rigida</li>
-        <li>Metti una mano sulla pancia, sopra l'ombelico</li>
-        <li>Inspira lentamente e lascia che la pancia si espanda (non il petto)</li>
-        <li>Espira ancora più lentamente, lasciando che la pancia torni verso la colonna</li>
-        <li>Ripeti per 5 respiri, senza forzare</li>
+        <li><a href="#cose">Cos'è davvero</a></li>
+        <li><a href="#smetti">Perché smetti di usarlo</a></li>
+        <li><a href="#paghi">Dove lo paghi</a></li>
+        <li><a href="#esercizi">Tre esercizi</a></li>
+        <li><a href="#solo">Quando non basta</a></li>
       </ol>
-      <p>Se la tua pancia non si muove o si muove poco, il diaframma è bloccato. È il primo segnale che vale la pena lavorarci.</p>
+    </aside>
 
-      <h2>Quando serve un professionista</h2>
-      <p>L'esercizio sopra è un punto di partenza. Ma quando il diaframma è cronicamente bloccato — spesso per anni di stress, postura alterata o traumi — servono tecniche specifiche per liberarlo: lavoro osteopatico, posturale, respiratorio.</p>
-      <p>Nel mio metodo il diaframma è sempre uno degli elementi centrali della valutazione. Perché cambiarlo cambia tutto il resto.</p>
+    <div class="body-text">
+      <p>
+        Lo chiamano "il muscolo dimenticato" e la definizione, per una volta, non è marketing. Il diaframma è una cupola muscolo-tendinea che separa il torace dall'addome, si abbassa quando inspiri e risale quando espiri. <strong>È il primo muscolo che si attiva ogni volta che ti muovi</strong> — prima del core, prima dei glutei, prima delle braccia. E nella maggior parte delle persone è il primo a smettere di funzionare come dovrebbe.
+      </p>
+      <p>
+        La cosa interessante non è anatomica. È che il modo in cui respiri racconta — letteralmente, momento per momento — come stai. Il respiro corto della giornata difficile. Il sospiro che ti scappa quando finalmente ti siedi. L'apnea inconsapevole davanti al computer. Tutto questo passa dal diaframma, e tutto questo lascia un segno nel corpo.
+      </p>
 
-      <hr>
-      <p style="color:var(--muted);font-size:.95rem;">Se vuoi capire se il tuo diaframma sta lavorando correttamente, prenota una valutazione.</p>
-      <a href="contatti.html" class="btn btn-primary" style="margin-top:8px;">Prenota una valutazione →</a>
+      <h2 id="cose"><span class="num">— 01</span>Cos'è davvero</h2>
+      <p>
+        Tecnicamente è un muscolo striato, ma la sua singolarità sta nei rapporti che ha con il resto del corpo. <em>Tocca tutto.</em> Sopra ha cuore e polmoni; sotto, fegato, stomaco e intestino. Si aggancia alle ultime sei coste, allo sterno e alle prime tre vertebre lombari. Lo attraversano l'esofago, l'aorta, la vena cava e — non secondario — il nervo vago, il principale regolatore del sistema parasimpatico.
+      </p>
+      <p>
+        Significa che ogni volta che il diaframma lavora bene, massaggia gli organi, mobilizza la colonna lombare, modula la pressione addominale e <strong>stimola la branca del sistema nervoso che ti calma</strong>. Quando lavora male, succede esattamente il contrario.
+      </p>
+      <div class="pull">
+        <q>Non respiri per vivere. Respiri il modo in cui vivi.</q>
+        <div class="attr">— Premessa di ogni trattamento</div>
+      </div>
 
+      <h2 id="smetti"><span class="num">— 02</span>Perché smetti di usarlo</h2>
+      <p>Non è una decisione. È una sommatoria di piccole cose che, messe insieme per anni, spostano il respiro verso l'alto: nel torace, nelle spalle, nel collo. I responsabili principali sono tre.</p>
+
+      <h3>Postura seduta prolungata</h3>
+      <p>Stare seduti otto ore comprime la parte anteriore del tronco, riduce lo spazio in cui il diaframma può abbassarsi e accorcia gradualmente il muscolo. Il corpo, da bravo risparmiatore, sposta il lavoro sui muscoli accessori della respirazione — scaleni, sternocleidomastoideo, trapezio superiore. Sono muscoli pensati per emergenze brevi, non per respirare tutto il giorno. Da qui mal di collo, cefalea tensiva, spalle alte.</p>
+
+      <h3>Stress cronico</h3>
+      <p>Sotto stress, il sistema nervoso autonomo entra in modalità di allerta e <strong>il respiro diventa toracico, corto, frequente</strong>. È una risposta di sopravvivenza: utile in dieci minuti, dannosa in dieci anni. Il diaframma, in questa modalità, si "blocca" in posizione alta e perde mobilità.</p>
+
+      <h3>Memoria emotiva</h3>
+      <p>Il corpo trattiene ciò che la mente non ha ancora elaborato. Eventi che hanno richiesto controllo — lutti, paure, periodi in cui "non potevi crollare" — spesso lasciano il diaframma rigido, come se il corpo avesse imparato a non lasciar andare completamente l'aria. È una forma di trattenuta somatica, ed è uno dei motivi per cui il lavoro sul respiro è anche un lavoro emotivo.</p>
+
+      <h2 id="paghi"><span class="num">— 03</span>Dove lo paghi</h2>
+      <p>Un diaframma che non lavora bene raramente si manifesta come "ho il diaframma bloccato". Si manifesta come altro. Ecco le quattro porte d'ingresso più frequenti che vedo in studio.</p>
+
+      <div class="symptom-grid">
+        <div>
+          <div class="label">— Porta 1</div>
+          <h4>Mal di schiena lombare</h4>
+          <p>Il diaframma si inserisce sulle prime vertebre lombari. Quando è rigido, tira. La lombare cronica che non passa con esercizi e fisioterapia spesso ha qui la sua chiave.</p>
+        </div>
+        <div>
+          <div class="label">— Porta 2</div>
+          <h4>Cervicalgia &amp; cefalea</h4>
+          <p>Se il diaframma non scende, respirano scaleni e trapezi. Diventano cronicamente contratti. Il dolore arriva al collo e alla testa, non al torace dove sta il vero problema.</p>
+        </div>
+        <div>
+          <div class="label">— Porta 3</div>
+          <h4>Disturbi digestivi</h4>
+          <p>Reflusso, gonfiore, digestione lenta. Il diaframma massaggia stomaco e intestino a ogni respiro. Se è bloccato, quel massaggio non c'è — e l'apparato digerente lo sente.</p>
+        </div>
+        <div>
+          <div class="label">— Porta 4</div>
+          <h4>Ansia &amp; sonno</h4>
+          <p>Il nervo vago passa proprio lì. Un respiro toracico mantiene il sistema nervoso in allerta. Risultato: difficoltà ad addormentarsi, sonno leggero, sensazione di non essere mai del tutto al sicuro nel proprio corpo.</p>
+        </div>
+      </div>
+
+      <h2 id="esercizi"><span class="num">— 04</span>Tre esercizi che puoi fare oggi</h2>
+      <p>Non sono "esercizi di respirazione" da fare cinque minuti e basta. Sono modi per ricordare al diaframma che esiste. Bastano due settimane di pratica regolare per sentire una differenza misurabile — meno tensione cervicale, sonno più profondo, più spazio quando respiri.</p>
+
+      <ol class="steps">
+        <li>
+          <div>
+            <h4>Respirazione addominale supina</h4>
+            <p>Steso a pancia in su, una mano sullo sterno e una sull'ombelico. Inspira con il naso cercando di muovere solo la mano bassa. Espira lentamente, dal naso o dalla bocca socchiusa, lasciando andare. <strong>5 minuti al mattino, 5 alla sera.</strong> L'obiettivo non è respirare di più: è respirare nel posto giusto.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h4>Posizione del bambino con respiro lungo</h4>
+            <p>In ginocchio, sedere sui talloni, fronte a terra, braccia distese in avanti. In questa posizione il diaframma trova spazio sulla parte posteriore. Inspira sentendo la schiena che si gonfia, espira lasciando andare il peso. Otto respiri, due volte al giorno.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h4>Mobilizzazione delle ultime coste</h4>
+            <p>In piedi, mani sulle coste basse, lateralmente. Inspira sentendo le coste che si aprono lateralmente contro le mani; espira sentendole rientrare. È il movimento che il diaframma esegue ogni volta che lavora bene, e che la maggior parte delle persone non sente più.</p>
+          </div>
+        </li>
+      </ol>
+
+      <h2 id="solo"><span class="num">— 05</span>Quando il fai-da-te non basta</h2>
+      <p>Se hai mal di schiena cronico, cervicale che non passa, problemi digestivi ricorrenti o un respiro che non si "apre" nemmeno con gli esercizi, è il momento di farlo guardare a qualcuno. Il diaframma si valuta — e si tratta — manualmente. Nel mio lavoro lo faccio dentro un approccio più ampio: <strong>posturologia con il Metodo Mézières</strong> per liberare le catene muscolari che lo tengono bloccato, e <strong>PSYCH-K<sup style="font-size:0.55em">®</sup></strong> quando dietro il blocco c'è una storia emotiva che il corpo non ha ancora digerito.</p>
+      <p>Non sempre serve. A volte basta un esercizio fatto bene per sei mesi. Ma se senti che qualcosa non torna, vale la pena di guardarci insieme.</p>
+
+      <div class="author-box">
+        <div class="author-avatar">
+          <img src="logo.png" alt="Nicola Bastasini" />
+        </div>
+        <div>
+          <div class="label">Sull'autore</div>
+          <h4>Nicola Bastasini</h4>
+          <div class="role">Osteopata D.O. · Posturologo · Istruttore Fitness</div>
+          <p>Lavora con le persone, non con i sintomi. Combina tecnica manuale, posturologia (Metodo Mézières) e PSYCH-K<sup style="font-size:0.6em">®</sup> per accompagnare il corpo verso un equilibrio costruito con metodo, nel rispetto dei tempi di chi ha davanti. Riceve a Pescantina (VR).</p>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+
+    <aside class="rail">
+      <div class="nb-card">
+        <div class="card-label">In numeri</div>
+        <div class="factoid-stat">
+          <span class="num">5cm</span>
+          <span class="lbl">l'escursione media del diaframma in un respiro <strong>profondo</strong>.</span>
+        </div>
+        <div class="factoid-stat">
+          <span class="num">1,5cm</span>
+          <span class="lbl">l'escursione media in un adulto <strong>cronicamente stressato</strong>.</span>
+        </div>
+        <div class="factoid-stat">
+          <span class="num">14 sec</span>
+          <span class="lbl">la durata di un ciclo respiratorio <strong>davvero rilassato</strong>.</span>
+        </div>
+      </div>
+
+      <div class="nb-card">
+        <div class="card-label">Verifica veloce</div>
+        <h3>Stai respirando con il diaframma?</h3>
+        <p>Mettiti in piedi, una mano sul petto, una sulla pancia. Respira normalmente per dieci secondi.</p>
+        <p><strong>Si muove la mano alta?</strong> Respiri col torace. <strong>Si muove la mano bassa?</strong> Bene. <strong>Si muovono entrambe poco?</strong> C'è del lavoro da fare.</p>
+      </div>
+
+      <div class="nb-card dark">
+        <div class="card-label">Vuoi farlo guardare?</div>
+        <h3>Una prima valutazione, senza impegno.</h3>
+        <p>Quaranta minuti per capire da dove partire. A Pescantina, in studio.</p>
+        <a class="nb-btn" href="contatti.html">Prenota →</a>
+      </div>
+    </aside>
+  </article>
+
+  <section class="cta-strip">
+    <div>
+      <h2>Se senti che qualcosa<br>non torna, <em>parliamone.</em></h2>
+      <p>Una conversazione, senza impegno, per capire se questo percorso può essere il tuo. Lavoro con metodo, nel rispetto dei tuoi tempi.</p>
+    </div>
+    <div class="cta-actions">
+      <span class="label">Telefono · WhatsApp</span>
+      <span class="phone">+39 348 304 3935</span>
+      <span class="place">Pescantina · Verona &amp; provincia</span>
+      <a class="nb-btn" href="https://wa.me/393483043935">Scrivimi su WhatsApp →</a>
+    </div>
+  </section>
+
+</div>
 
 <script src="nav.js"></script>
 </body>
